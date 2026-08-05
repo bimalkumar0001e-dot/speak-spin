@@ -1,0 +1,6 @@
+{
+  "name": "SpeakSpin",
+  "description": "A magical, slot-machine speaking quest artifact for mastering English speaking skills.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
