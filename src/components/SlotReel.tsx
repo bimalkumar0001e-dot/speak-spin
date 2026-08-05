@@ -133,13 +133,12 @@ export const SlotReel: React.FC<SlotReelProps> = ({
 
       {/* Slot Machine Display Frame */}
       <div
-        className={`relative z-30 w-full rounded-2xl p-6 bg-[#13131A] border transition-all duration-300 ${
-          revealFlash
-            ? 'border-[#D8B46A] reveal-flash'
-            : isSpinning
+        className={`relative z-30 w-full rounded-2xl p-6 bg-[#13131A] border transition-all duration-300 ${revealFlash
+          ? 'border-[#D8B46A] reveal-flash'
+          : isSpinning
             ? 'border-[#D8B46A]/40 shadow-lg'
             : 'border-white/10'
-        }`}
+          }`}
       >
         {/* Inner Slot Window */}
         <div
@@ -168,16 +167,14 @@ export const SlotReel: React.FC<SlotReelProps> = ({
                 id="btn-category-dropdown"
                 onClick={() => !isSpinning && setIsDropdownOpen(!isDropdownOpen)}
                 disabled={isSpinning}
-                className={`group font-cinzel text-lg sm:text-xl md:text-2xl font-bold text-[#F6F2EB] tracking-[0.18em] uppercase text-center leading-snug flex items-center justify-center gap-2 transition-colors duration-200 ${
-                  isSpinning ? 'cursor-default' : 'cursor-pointer hover:text-[#D8B46A]'
-                }`}
+                className={`group font-cinzel text-lg sm:text-xl md:text-2xl font-bold text-[#F6F2EB] tracking-[0.18em] uppercase text-center leading-snug flex items-center justify-center gap-2 transition-colors duration-200 ${isSpinning ? 'cursor-default' : 'cursor-pointer hover:text-[#D8B46A]'
+                  }`}
                 title="Click to select challenge category"
               >
                 <span>{currentDisplayChallenge.category}</span>
                 <ChevronDown
-                  className={`w-4 h-4 text-[#D8B46A] shrink-0 transition-transform duration-300 ${
-                    isDropdownOpen ? 'rotate-180' : 'group-hover:translate-y-0.5'
-                  }`}
+                  className={`w-4 h-4 text-[#D8B46A] shrink-0 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : 'group-hover:translate-y-0.5'
+                    }`}
                 />
               </button>
             </motion.div>
@@ -205,11 +202,10 @@ export const SlotReel: React.FC<SlotReelProps> = ({
                         key={cat}
                         type="button"
                         onClick={() => handleSelectCategory(cat)}
-                        className={`px-3 py-1.5 rounded-md text-left text-xs font-cinzel font-semibold tracking-wider transition-all duration-150 flex items-center justify-between cursor-pointer ${
-                          isSelected
-                            ? 'bg-[#D8B46A]/20 text-[#D8B46A] border border-[#D8B46A]/50'
-                            : 'text-[#F6F2EB]/90 hover:bg-white/5 hover:text-[#D8B46A]'
-                        }`}
+                        className={`px-3 py-1.5 rounded-md text-left text-xs font-cinzel font-semibold tracking-wider transition-all duration-150 flex items-center justify-between cursor-pointer ${isSelected
+                          ? 'bg-[#D8B46A]/20 text-[#D8B46A] border border-[#D8B46A]/50'
+                          : 'text-[#F6F2EB]/90 hover:bg-white/5 hover:text-[#D8B46A]'
+                          }`}
                       >
                         <span className="truncate">{cat}</span>
                         {isSelected && <Check className="w-3.5 h-3.5 text-[#D8B46A] shrink-0 ml-1" />}
@@ -229,11 +225,10 @@ export const SlotReel: React.FC<SlotReelProps> = ({
           onClick={handleSpinClick}
           disabled={isSpinning}
           id="btn-spin-quest"
-          className={`px-8 py-3.5 rounded-full bg-[#13131A] border text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-200 cursor-pointer flex items-center justify-center gap-2.5 shadow-sm active:scale-95 ${
-            isSpinning
-              ? 'border-[#D8B46A]/50 text-[#D8B46A] opacity-90 cursor-not-allowed'
-              : 'border-[#D8B46A]/40 text-[#F6F2EB] hover:bg-[#1A1A24] hover:border-[#D8B46A]/80 hover:text-[#D8B46A]'
-          }`}
+          className={`px-8 py-3.5 rounded-full bg-[#13131A] border text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-200 cursor-pointer flex items-center justify-center gap-2.5 shadow-sm active:scale-95 ${isSpinning
+            ? 'border-[#D8B46A]/50 text-[#D8B46A] opacity-90 cursor-not-allowed'
+            : 'border-[#D8B46A]/40 text-[#F6F2EB] hover:bg-[#1A1A24] hover:border-[#D8B46A]/80 hover:text-[#D8B46A]'
+            }`}
         >
           {isSpinning ? (
             <>
@@ -247,12 +242,12 @@ export const SlotReel: React.FC<SlotReelProps> = ({
             </>
           ) : selectedChallenge ? (
             <>
-             
+
               <span>SPIN AGAIN</span>
             </>
           ) : (
             <>
-             
+
               <span>SPIN</span>
             </>
           )}

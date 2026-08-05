@@ -56,7 +56,6 @@ export function DomainSelector({
         } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
         title="Select prompt domain filter"
       >
-        <span className="text-sm leading-none">{selectedDomain.emoji}</span>
         <span className="font-sans font-medium text-[#F6F2EB] max-w-[110px] sm:max-w-[140px] truncate">
           {selectedDomain.name}
         </span>
@@ -111,7 +110,6 @@ export function DomainSelector({
                       }`}
                     >
                       <div className="flex items-center gap-2.5 min-w-0">
-                        <span className="text-base leading-none shrink-0">{domain.emoji}</span>
                         <span className="truncate">{domain.name}</span>
                       </div>
                       {isSelected && <Check className="w-3.5 h-3.5 text-[#D8B46A] shrink-0" />}

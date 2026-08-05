@@ -52,7 +52,7 @@ export const ChallengeCard: React.FC<ChallengeCardProps> = ({
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -15, scale: 0.98 }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="relative w-full max-w-2xl mx-auto mt-10 text-center flex flex-col items-center"
+      className="relative w-full max-w-2xl mx-auto mt-3 text-center flex flex-col items-center"
     >
       {/* Prompt Display Box with Fade Left to Right Transition */}
       <div className="relative w-full flex flex-col items-center min-h-[160px] justify-center overflow-hidden py-2">
@@ -127,7 +127,7 @@ export const ChallengeCard: React.FC<ChallengeCardProps> = ({
             )}
 
             {/* Challenge Description / Prompt */}
-            <p className="text-sm sm:text-base text-[#A8A2B8] font-light leading-relaxed max-w-lg mt-4 mb-2 min-h-[48px]">
+            <p className="text-sm sm:text-base text-[#A8A2B8] font-light leading-relaxed max-w-lg mt-1 mb-2 min-h-[48px]">
               {activeChallenge.prompt}
             </p>
           </motion.div>
@@ -135,7 +135,7 @@ export const ChallengeCard: React.FC<ChallengeCardProps> = ({
       </div>
 
       {/* Spin Prompt Button - Placed directly below the prompt description */}
-      <div className="mt-4 mb-8 flex justify-center z-10">
+      <div className="mt-1 mb-8 flex justify-center z-10">
         <button
           onClick={handleSpinPrompt}
           id="btn-spin-prompt"
@@ -154,7 +154,7 @@ export const ChallengeCard: React.FC<ChallengeCardProps> = ({
           id="btn-1-min-timer"
           className="py-3.5 px-6 rounded-full bg-[#13131A] border border-white/10 text-xs font-medium tracking-[0.15em] uppercase text-[#F6F2EB] hover:bg-[#1A1A24] hover:border-[#D8B46A]/50 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2.5 shadow-sm active:scale-98"
         >
-       
+
           <span>Start 1 Minute Timer</span>
         </button>
 
@@ -164,7 +164,7 @@ export const ChallengeCard: React.FC<ChallengeCardProps> = ({
           id="btn-10-min-timer"
           className="py-3.5 px-6 rounded-full bg-[#13131A] border border-[#D8B46A]/30 text-xs font-medium tracking-[0.15em] uppercase text-[#D8B46A] hover:bg-[#1A1A24] hover:border-[#D8B46A]/60 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2.5 shadow-sm active:scale-98"
         >
-         
+
           <span>Start 10 Minute Research</span>
         </button>
       </div>
